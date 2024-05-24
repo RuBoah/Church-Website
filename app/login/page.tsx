@@ -4,11 +4,7 @@ import styles from '@/app/ui/home.module.css';
 import { lusitana } from '@/app/ui/fonts';
 import Link from 'next/link';
 import Image from 'next/image';
-import {
-  AtSymbolIcon,
-  KeyIcon,
-  PencilIcon,
-} from '@heroicons/react/24/outline';
+import { AtSymbolIcon, KeyIcon, PencilIcon } from '@heroicons/react/24/outline';
 import { ArrowRightIcon } from '@heroicons/react/20/solid';
 import { Button } from '../ui/button';
 function page() {
@@ -21,24 +17,16 @@ function page() {
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg bg-gray-50 px-6 py-10 md:w-2/5 md:px-20">
           <div className="">
-            Enter details to register account, if you already have an account,
-            you can{' '}
+            Enter details to{' '}
+            <Link className="underline hover:bg-cyan-400" href="/register">
+              register
+            </Link>{' '}
+            account, if you already have an account, you can{' '}
             <Link href="/login" className="underline hover:bg-cyan-400">
               login
             </Link>
           </div>
-          <div className="relative">
-            <input
-              className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
-              id="name"
-              type="text"
-              name="name"
-              placeholder="Enter name..."
-              required
-              minLength={6}
-            />
-            <PencilIcon className="pointer-events-none absolute left-3 top-1/2 h-[18px] w-[18px] -translate-y-1/2 text-gray-500 peer-focus:text-gray-900" />
-          </div>
+
           <div className="relative">
             <input
               className="peer block w-full rounded-md border border-gray-200 py-[9px] pl-10 text-sm outline-2 placeholder:text-gray-500"
