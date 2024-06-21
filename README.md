@@ -1,5 +1,4 @@
-## Next.js App Router Course - Starter
+churchday, this is the frontend for my backend node mgmt app
 
-This is the starter template for the Next.js App Router Course. It contains the starting code for the dashboard application.
-
-For more information, see the [course curriculum](https://nextjs.org/learn) on the Next.js Website.
+explore the node service here: 
+- [backend on render](https://churchday-backend.onrender.com/)
