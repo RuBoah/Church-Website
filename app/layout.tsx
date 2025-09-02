@@ -1,5 +1,8 @@
 import '@/app/ui/global.css';
 import { inter } from '@/app/ui/fonts';
+import Navbar from '@/components/Navbar';
+import { ThemeProvider } from '@/components/ThemeProvider';
+
 export default function RootLayout({
   children,
 }: {
@@ -7,7 +10,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${inter.className} antialiased`}>
+        {/* Wrap app with ThemeProvider for dark mode */}
+        <ThemeProvider>
+          {/* Navbar at the top */}
+          <Navbar />
+
+          {/* Main page content */}
+          <main>{children}</main>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
