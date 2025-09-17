@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Search from '@/app/ui/search';
-import Datatable from '@/app/ui/datatable';
+
 function Attendance() {
   const invoices = [
     {
@@ -26,9 +26,9 @@ function Attendance() {
     <div>
       <h1 className="my-5">Member Records</h1>
       <Search placeholder="Search a member to log attendance..." />
-      <Datatable invoices={invoices} />
+    
       <h1 className="my-5">Attendance Records</h1>
-      <Datatable invoices={invoices} />
+     
     </div>
   );
 }
